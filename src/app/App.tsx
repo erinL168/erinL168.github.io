@@ -916,6 +916,139 @@ function Projects() {
   );
 }
 
+// ─── Fun Facts ──────────────────────────────────────────────────────────────
+const FUN_FACTS = [
+  {
+    icon: "🎹",
+    title: "Jazz comping & piano",
+    description: "Love discovering new voicings, building new lines on existing standards, and getting better at turning improvisation into conversation (my favourite jazz pianist is hiromi :), highly recommend giving her a listen)",
+  },
+  {
+    icon: "🥊",
+    title: "Muay Thai",
+    description: "There's something satisfying about being able to kick something really hard without breaking anything ;)",
+  },
+  {
+    icon: "🧗",
+    title: "Rock climbing",
+    description: "What can I say, there's something enticing about plastic rocks - next adventure: outdoor climbing :O",
+  },
+  {
+    icon: "🌿",
+    title: "Nature",
+    description: "A bit of fresh air always helps me reset and my dog loves it too.",
+  },
+];
+
+function FunFacts() {
+  return (
+    <section className="py-28 px-6 relative overflow-hidden" style={{ background: "#140e06" }}>
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at top left, rgba(191,92,40,0.14), transparent 42%)",
+        }}
+      />
+      <div className="relative max-w-6xl mx-auto">
+        <FadeIn>
+          <p
+            style={{
+              fontFamily: "'DM Mono', monospace",
+              fontSize: 10,
+              letterSpacing: "0.3em",
+              textTransform: "uppercase",
+              color: "#bf5c28",
+              marginBottom: 12,
+            }}
+          >
+            Fun Facts
+          </p>
+          <h2
+            style={{
+              fontFamily: "'Old Standard TT', serif",
+              fontWeight: 700,
+              fontSize: "clamp(2.1rem, 4vw, 3.4rem)",
+              lineHeight: 0.95,
+              color: "#f0e2c0",
+              marginBottom: 10,
+            }}
+          >
+            A little more
+            <br />
+            <em style={{ fontStyle: "italic", color: "#bf5c28", fontWeight: 400 }}>about me.</em>
+          </h2>
+          <p
+            style={{
+              fontFamily: "'Libre Baskerville', serif",
+              fontSize: "0.95rem",
+              color: "#a08060",
+              lineHeight: 1.8,
+              maxWidth: "56rem",
+              marginBottom: 28,
+            }}
+          >
+            I’m the kind of person who finds beauty in both structured thinking and lived experience — whether that means practicing jazz on the piano, training with focus, or heading outside to reset.
+          </p>
+        </FadeIn>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {FUN_FACTS.map((fact, index) => (
+            <FadeIn key={fact.title} delay={index * 0.06}>
+              <div
+                style={{
+                  background: "rgba(34,22,8,0.72)",
+                  border: "1px solid rgba(191,92,40,0.22)",
+                  padding: "24px 22px",
+                  minHeight: 150,
+                }}
+              >
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 42,
+                    height: 42,
+                    borderRadius: "999px",
+                    background: "rgba(191,92,40,0.16)",
+                    fontSize: 20,
+                    marginBottom: 12,
+                  }}
+                >
+                  {fact.icon}
+                </div>
+                <h3
+                  style={{
+                    fontFamily: "'Old Standard TT', serif",
+                    fontWeight: 700,
+                    fontSize: "1.1rem",
+                    color: "#f0e2c0",
+                    marginBottom: 8,
+                  }}
+                >
+                  {fact.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "'Libre Baskerville', serif",
+                    fontSize: "0.9rem",
+                    color: "#a08060",
+                    lineHeight: 1.75,
+                    margin: 0,
+                  }}
+                >
+                  {fact.description}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ─── Skills ───────────────────────────────────────────────────────────────────
 const SKILLS = [
   { group: "Frontend & Web", items: ["React", "TypeScript", "JavaScript", "HTML/CSS", "Next.js", ".NET", "REST APIs", "Express.js", "Figma"] },
@@ -1264,6 +1397,7 @@ export default function App() {
       <About />
       <Experience />
       <Projects />
+      <FunFacts />
       <Skills />
       <Education />
       <Contact />
