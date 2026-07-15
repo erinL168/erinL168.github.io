@@ -934,6 +934,11 @@ const FUN_FACTS = [
     description: "What can I say, there's something enticing about plastic rocks - next adventure: outdoor climbing :O",
   },
   {
+    icon: "✈️",
+    title: "Traveling",
+    description: "I love exploring new places, experiencing different cultures, and finding hidden gems - mainly restaurants though.",
+  },
+  {
     icon: "🌿",
     title: "Nature",
     description: "A bit of fresh air always helps me reset and my dog loves it too.",
