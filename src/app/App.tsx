@@ -573,7 +573,7 @@ function About() {
 // ─── Experience ───────────────────────────────────────────────────────────────
 const EXPERIENCE = [
   {
-    title: "Business Engineering Analyst",
+    title: "Microsoft Power Platform Solutions Engineer",
     company: "Kyndryl Global (formerly IBM's Global Technology Services)",
     location: "Toronto, ON",
     period: "May 2025 – Present",
