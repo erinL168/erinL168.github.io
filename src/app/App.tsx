@@ -2,6 +2,17 @@ import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "motion/react";
 import imageRef from "@/imports/image.png";
 
+function trackAnalyticsEvent(action: string, label?: string) {
+  const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag;
+
+  if (typeof gtag === "function") {
+    gtag("event", action, {
+      event_category: "engagement",
+      event_label: label ?? action,
+    });
+  }
+}
+
 // ─── Grain overlay ────────────────────────────────────────────────────────────
 function Grain() {
   return (
@@ -417,6 +428,7 @@ function Hero() {
         >
           <a
             href="#experience"
+            onClick={() => trackAnalyticsEvent("resume_click", "view_resume")}
             style={{
               fontFamily: "'DM Mono', monospace",
               fontSize: 11,
@@ -869,6 +881,7 @@ function Projects() {
                     href={p.link}
                     target="_blank"
                     rel="noreferrer"
+                    onClick={() => trackAnalyticsEvent("project_click", p.title)}
                     style={{
                       fontFamily: "'DM Mono', monospace",
                       fontSize: 9.5,
