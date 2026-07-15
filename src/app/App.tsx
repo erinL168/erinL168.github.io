@@ -921,12 +921,12 @@ const FUN_FACTS = [
   {
     icon: "🎹",
     title: "Jazz comping & piano",
-    description: "Love discovering new voicings, building new lines on existing standards, and getting better at turning improvisation into conversation (my favourite jazz pianist is hiromi :), highly recommend giving her a listen)",
+    description: "Love discovering new voicings + turning improvisation into conversation (my favourite jazz pianist is hiromi :), highly recommend giving her a listen)",
   },
   {
     icon: "🥊",
     title: "Muay Thai",
-    description: "There's something satisfying about being able to kick something really hard without breaking anything ;)",
+    description: "There's something satisfying about being able to kick something really hard without breaking anything ;) \n \n",
   },
   {
     icon: "🧗",
