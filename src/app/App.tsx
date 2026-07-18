@@ -1057,7 +1057,7 @@ function FunFacts() {
 // ─── Skills ───────────────────────────────────────────────────────────────────
 const SKILLS = [
   { group: "Frontend & Web", items: ["React", "TypeScript", "JavaScript", "HTML/CSS", "Next.js", ".NET", "REST APIs", "Express.js", "Figma"] },
-  { group: "Programming", items: ["Python", "Java", "C++", "C", "PHP", "Bash", "SQL", "PowerFX"] },
+  { group: "Programming", items: ["Python", "Java", "C", "PowerShell", "Bash", "SQL", "PowerFX"] },
   { group: "Data & AI", items: ["SQL Server", "Snowflake", "MongoDB", "ETL", "Power BI", "Microsoft Copilot Studio", "AI Integration"] },
   { group: "Cloud & DevOps", items: ["Azure", "AWS", "AWS EC2", "Azure DevOps", "GitHub Actions", "Docker", "CI/CD", "Git"] },
 ];
